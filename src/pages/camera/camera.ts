@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { Storage } from '@ionic/storage';
+
+
 
 
 
@@ -19,7 +20,7 @@ import { Storage } from '@ionic/storage';
 export class CameraPage {
 public photos: any;
 public base64Image : string;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera, private alertCtrl: AlertController, private storage: Storage, str: Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera, private alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -48,11 +49,10 @@ this
  this.photos.push(this.base64Image);
  this.photos.reverse();
 }, (err) => {
+  console.log(err);
  // Handle error
 });
- this.storage.get('age').then((val) => {
-    console.log('Your age is', val);
-  });
+ 
 }
 deletePhoto(index){
 

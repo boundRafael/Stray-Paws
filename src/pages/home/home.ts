@@ -11,7 +11,7 @@ import {
  Marker
 } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
-import { Storage } from '@ionic/storage';
+
 
 
 
@@ -21,7 +21,7 @@ import { Storage } from '@ionic/storage';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public platform : Platform, public googleMaps:GoogleMaps, private geolocation: Geolocation, private storage: Storage) {
+  constructor(public navCtrl: NavController, public platform : Platform, public googleMaps:GoogleMaps, private geolocation: Geolocation) {
       platform.ready().then(() => {
          this.loadMap();
     });
@@ -92,31 +92,31 @@ let ionic8: LatLng = new LatLng(34.042062,-118.308336);
    title: 'Ionic'
  };
 let markerOptions2: MarkerOptions = {
-   position: ionic,
+   position: ionic2,
    title: 'Fur Baby Rescue'
  };
   let markerOptions3: MarkerOptions = {
-   position: ionic,
+   position: ionic3,
    title: 'Washington Dog & Cat Hospital'
   };
   let markerOptions4: MarkerOptions = {
-   position: ionic,
+   position: ionic4,
    title: 'Centinela Animal Hospital'
   };
   let markerOptions5: MarkerOptions = {
-   position: ionic,
+   position: ionic5,
    title: 'Pet Harbor'
   };
   let markerOptions6: MarkerOptions = {
-   position: ionic,
+   position: ionic6,
    title: 'Los Angeles County Animal shelter'
   };
   let markerOptions7: MarkerOptions = {
-   position: ionic,
+   position: ionic7,
    title: 'South Bay Pet Adoption Center'
   };
   let markerOptions8: MarkerOptions = {
-   position: ionic,
+   position: ionic8,
    title: 'Western Animal Hospital'
   };
    map.addMarker(markerOptions)
@@ -124,32 +124,32 @@ let markerOptions2: MarkerOptions = {
       marker.showInfoWindow();
     });
     map.addMarker(markerOptions2)
-   .then((marker2: Marker) => {
-      marker2.showInfoWindow();
+   .then((marker: Marker) => {
+      marker.showInfoWindow();
     });
      map.addMarker(markerOptions3)
-   .then((marker3: Marker) => {
-      marker3.showInfoWindow();
+   .then((marker: Marker) => {
+      marker.showInfoWindow();
     });
      map.addMarker(markerOptions4)
-   .then((marker4: Marker) => {
-      marker4.showInfoWindow();
+   .then((marker: Marker) => {
+      marker.showInfoWindow();
     });
      map.addMarker(markerOptions5)
-   .then((marker5: Marker) => {
-      marker5.showInfoWindow();
+   .then((marker: Marker) => {
+      marker.showInfoWindow();
     });
      map.addMarker(markerOptions6)
-   .then((marker6: Marker) => {
-      marker6.showInfoWindow();
+   .then((marker: Marker) => {
+      marker.showInfoWindow();
     });
      map.addMarker(markerOptions7)
-   .then((marker7: Marker) => {
-      marker7.showInfoWindow();
+   .then((marker: Marker) => {
+      marker.showInfoWindow();
     });
      map.addMarker(markerOptions8)
-   .then((marker8: Marker) => {
-      marker8.showInfoWindow();
+   .then((marker: Marker) => {
+      marker.showInfoWindow();
     });
  }
 

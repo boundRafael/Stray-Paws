@@ -2,10 +2,11 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { Camera, CameraOptions } from '@ionic-native/camera'
+import { Camera } from '@ionic-native/camera'
 import { Geolocation } from '@ionic-native/geolocation';
+import { IonicStorageModule } from '@ionic/storage';
 
-import {Database} from '@ionic/cloud-angular';
+
 
 
  
@@ -40,13 +41,11 @@ const cloudSettings: CloudSettings = {
   imports: [
      IonicModule.forRoot(MyApp),
     CloudModule.forRoot(cloudSettings),
-     IonicStorageModule.forRoot({
-      name: 'MyApp ',
-         driverOrder: ['indexeddb', 'sqlite', 'websql']
-    }),
     BrowserModule,
-    IonicModule.forRoot(MyApp),
-     IonicStorageModule.forRoot()
+      IonicStorageModule.forRoot()
+    
+    
+    
 
   ],
   bootstrap: [IonicApp],
@@ -62,9 +61,12 @@ const cloudSettings: CloudSettings = {
     Geolocation,
     Camera,
     StatusBar,
+    IonicStorageModule,
+    Storage,
     SplashScreen,
     GoogleMaps,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}, Storage
+
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
 export class AppModule {}

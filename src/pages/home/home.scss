@@ -1,3 +1,40 @@
-page-home {
+.block{
+    position: relative;
+}
+    .deleteIcon {
+        position: absolute
+        margin-left;
+        margin-top:5px;
+        color:#000000
+    }
+    .camera{
+        display: inline-block;
+        float: left;
+        color:  #F1FFFD;
+        
+    }
+    .albums{
+        display: inline-block;
+        float: right;
 
+    }
+    .buttons{
+        margin-top: -70px;
+        z-index: 100;
+        margin-left: 20px;
+        margin-right: 20px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+background-color:       #F1FFFD;
+
+    }
+    #map{
+        height: 100%;
+        width: 100%;
+    }
+     .color{
+    background-color: #F1FFFD;
+     }
+.hex{
+    background-color: #F1FFFD
 }

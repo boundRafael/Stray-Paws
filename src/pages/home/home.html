@@ -1,10 +1,25 @@
-<ion-header>
+
+<ion-header  class="color">
   <ion-navbar>
-    <ion-title>Locations</ion-title>
+    <ion-title>Map</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="color">
   
-<div #map id="map" style="height:100%;"></div>
+<div #map id="map">
+ 
+</div>
+<div class="buttons">
+   <div class="camera">
+  <button  ion-fab (click)="takePhoto()">
+    <ion-icon name="camera"> </ion-icon>
+  </button>
+   </div>
+<div class="albums">
+  <button ion-fab  (click)="showProfilePage()"> 
+    <ion-icon name="albums"></ion-icon>
+ </button>
+</div>
+ </div>
 </ion-content>

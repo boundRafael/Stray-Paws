@@ -9,12 +9,14 @@ import { IonicStorageModule } from '@ionic/storage';
 
 
 
+
  
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
+import { GalleryPage } from '../pages/gallery/gallery';
+
 import { CameraPage } from '../pages/camera/camera';
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
 
@@ -35,7 +37,8 @@ const cloudSettings: CloudSettings = {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
+    GalleryPage,
+    
     CameraPage
   ],
   imports: [
@@ -54,7 +57,8 @@ const cloudSettings: CloudSettings = {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
+    GalleryPage,
+ 
     CameraPage
   ],
   providers: [

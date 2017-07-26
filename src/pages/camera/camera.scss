@@ -1,7 +1,7 @@
-page-camera {
+
 .block{
     position: relative;
-    
+}
     .deleteIcon {
         position: absolute
         margin-left;
@@ -10,6 +10,12 @@ page-camera {
     }
     .button{
         line-height:50px;
+        margin-top:130%;
+        margin-right:15%;
     }
-}
+
+.gallery{
+            line-height:60px;
+            margin-bottom: 190%;
+        margin-left:80%;
 }
